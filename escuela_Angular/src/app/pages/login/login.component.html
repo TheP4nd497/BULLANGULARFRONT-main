@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
+
+  <form (ngSubmit)="login()">
+    <div>
+      <label for="correo">Correo:</label>
+      <input id="correo" type="email" [(ngModel)]="correo" name="correo" required />
+    </div>
+
+    <div>
+      <label for="contrasena">Contraseña:</label>
+      <input id="contrasena" type="password" [(ngModel)]="contrasena" name="contrasena" required />
+    </div>
+
+    <div *ngIf="error" style="color: red; margin-top: 8px;">
+      {{ error }}
+    </div>
+
+    <button type="submit">Ingresar</button>
+  </form>
+</div>
